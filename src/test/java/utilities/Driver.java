@@ -11,18 +11,8 @@ import java.time.Duration;
 
 public class Driver {
 
-    /*
-     JUnit'de WebDriver objesi TestBase'den geliyordu
-
-     TestNG extends ile baglanma zorunlulugunu ortadan kaldirmak
-     ve testi yazanlara daha fazla kontrol imkani vermek icin
-     TestBase yerine Driver class'inda static 2 method ile
-     driver olusturma ve kapatma islemlerini yapmayi tercih etmistir
-     */
 
     private Driver(){
-        // Bu constructor default constructor ile ayni islevi yapan parametresiz constructor'dir
-        // buna erisimi kontrol edebilecegimiz icin bu constructor'i olusturduk
     }
 
     static WebDriver driver; // biz deger atamadigimiz icin Java default olarak null point eder
@@ -72,5 +62,4 @@ public class Driver {
             driver=null;
         }
     }
-
 }

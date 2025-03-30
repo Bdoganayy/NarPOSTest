@@ -1,5 +1,6 @@
 package pages;
 
+import org.bouncycastle.jcajce.provider.asymmetric.X509;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,17 +29,17 @@ public class NarPosPage {
     @FindBy(xpath = "//*[text()='Stok Kartları']")
     public WebElement stokKartlari;
 
-    @FindBy(xpath = "//tr[td[contains(text(), 'DOMATES')]]")
+    @FindBy(xpath = "//*[text()='DOMATES-REVIZE']")
     public WebElement domates;
 
     @FindBy(xpath = ".//button[contains(@class, 'menu-button')]")
     public WebElement menuButton;
 
-    @FindBy(xpath = "//span[@id=\"pr_id_11_label\"]")
+    @FindBy(xpath = "//*[text()='Malzeme']")
     public WebElement stockType;
     @FindBy(xpath = "//li[@aria-label=\"Diğer\"]")
     public WebElement another;
-    @FindBy(xpath = "(//span[@class=\"mat-button-wrapper\"])[4]")
+    @FindBy(xpath = "//*[text()=' Yeni Ekle ']")
     public WebElement newAdd;
 
     @FindBy(xpath = "//input[@placeholder=\"Adı Yazınız.\"]")
@@ -59,7 +60,7 @@ public class NarPosPage {
     @FindBy(xpath = "//*[text()='Vergi Seçiniz.']")
     public WebElement tax;
 
-    @FindBy(xpath = "//*[text()='KDV 1']")
+    @FindBy(xpath = "(//span[@class=\"ng-star-inserted\"])[2]")
     public WebElement kdv1;
 
     @FindBy(xpath = "//*[text()='Temel Birim Seçiniz.']")
@@ -96,12 +97,73 @@ public class NarPosPage {
     public WebElement yes;
 
     @FindBy(xpath = "//*[text()='Tamam']")
-    public WebElement okay;
+    public WebElement okayButton;
 
     @FindBy(xpath = "//*[text()='Kaydet ']")
     public WebElement save;
 
     @FindBy(xpath = "(//td[@class=\"p-element p-frozen-column\"])[2]")
     public WebElement refreshdRow1;
+
+    @FindBy(xpath = "//*[text()='Sil']")
+    public WebElement deleteButton;
+
+    @FindBy(xpath = "//*[text()='Yazmış olduğunuz isim kullanılıyor.']")
+    public WebElement usedNameFailed;
+
+    @FindBy(xpath = "//*[text()='Maliyet Yönetimi']")
+    public WebElement costManagement;
+
+    @FindBy(xpath = "//*[text()='Alış Faturası']")
+    public WebElement purchaseInvoice;
+
+    @FindBy(xpath = "//*[text()='Depo Seçiniz']")
+    public WebElement chooseWarehouse;
+
+    @FindBy(xpath = "//*[text()='Ana Şube Ana Depo']")
+    public WebElement mainWarehouseMainOffice;
+
+    @FindBy(xpath = "//*[text()=' Ana Şube Ana Depo ']")
+    public WebElement getMainWarehouseMainOffice;
+
+    @FindBy(xpath = "//*[text()='Cari Adı Seçiniz.']")
+    public WebElement currentName;
+
+    @FindBy(xpath = "//*[text()='NarPOS Tedarikçi']")
+    public WebElement narposTedarikci;
+
+
+    @FindBy(xpath = "//input[@placeholder=\"Stok Yazınız.\"]")
+    public WebElement placeHolder;
+    // (DGR) DOMATES
+    @FindBy(xpath = "//*[text()='(DGR) DOMATES']")
+    public WebElement dgrDomates;
+
+    @FindBy(xpath = "//li[@role=\"option\"]")
+    public WebElement option;
+
+    @FindBy(xpath = "(//input[@id=\"quantity\"])[1]")
+    public WebElement quantity;
+
+    @FindBy(xpath = "(//input[@placeholder=\"Miktar Yazınız.\"])[2]")
+    public WebElement unitPrice;
+
+    @FindBy(xpath = "//div[@class=\"col-md-6 modalFontNumber\"]")
+    public WebElement totalVat;
+
+    @FindBy(xpath = "(//input[@id=\"lineTotal\"])[2]")
+    public WebElement lineTotal;
+
+    @FindBy(xpath = "(//div[@class=\"col-md-6 modalFontNumber ng-star-inserted\"])[2]")
+    public WebElement netTotal;
+
+    @FindBy(xpath = "//*[@class=\"feather feather-arrow-left-circle\"]")
+    public WebElement arrowLeft;
+
+    @FindBy(xpath = "(//*[@aria-hidden=\"true\"])[3]")
+    public WebElement theerePointsButton;
+
+    @FindBy(xpath = "//*[text()='Fatura başarıyla silinmiştir.']")
+    public WebElement successVoice;
 
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="107.087" tests="6" skipped="0" failures="1" errors="0">
+<testcase classname="Stock Card Management" name="Get to NarPos" time="12.366">
+<system-out><![CDATA[
+Given I am logged in to NarPos..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Stock Card Management" name="Delete existing DOMATES stock" time="21.934">
+<system-out><![CDATA[
+When I delete the DOMATES stock if it exists................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Stock Card Management" name="Add new DOMATES stock card" time="13.049">
+<system-out><![CDATA[
+When I add a new DOMATES stock card and veriying............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Stock Card Management" name="Edit existing DOMATES stock card" time="17.05">
+<system-out><![CDATA[
+When I edit the DOMATES stock card and verifying that updated...............passed
+]]></system-out>
+</testcase>
+<testcase classname="Stock Card Management" name="Delete DOMATES-REVIZE stock card" time="16.834">
+<system-out><![CDATA[
+When I delete the DOMATES-REVIZE stock card and verifying DOMATES-REVIZE stock card is deleted.passed
+]]></system-out>
+</testcase>
+<testcase classname="Stock Card Management" name="Add the same DOMATES stock card again" time="25.487">
+<failure type="java.lang.AssertionError" message="expected [false] but found [true]">
+<![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.StockCardManagementStepdefinitions.iShouldSeeANameConflictError(StockCardManagementStepdefinitions.java:263)
+	at ✽.I shouldn't see a name conflict error(file:///C:/Users/bilal/IdeaProjects/NamilaTour/src/test/resources/features/US002_StockCardManagementTest.feature:21)
+]]>
+</failure>
+<system-out><![CDATA[
+When I try to add the same DOMATES stock card again.........................passed
+Then I shouldn't see a name conflict error..................................failed
+]]></system-out>
+</testcase>
+</testsuite>

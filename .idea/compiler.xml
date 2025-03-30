@@ -6,12 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="testNG" />
+        <module name="team120_Cucumber_Fall2023" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cucumber-allure-report" target="1.5" />
+      <module name="cucumber-tests" target="11" />
       <module name="namilaTour" target="11" />
       <module name="NamilaTour" target="11" />
+      <module name="NarPos" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
